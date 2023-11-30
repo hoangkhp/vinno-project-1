@@ -1,0 +1,150 @@
+
+body{
+
+	font-family: 'Lexend', sans-serif;
+}
+/*body *.no-font{
+	font-family: auto!important;
+}*/
+/*----------Logo----------*/
+
+
+.logo-img{
+	height: 26px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.trial-button {
+    background-color: #ee4e34;
+    padding: 8px 16px; /* Điều chỉnh kích thước padding tùy theo nhu cầu */
+}
+
+/*----------Discripttion----------*/
+.desc {
+	max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto;
+	margin-top: 50px;
+}
+
+.desc p {
+	color: #ee4e34;
+	letter-spacing: 0.01em;
+}
+/*----------Introduction----------*/
+.header-container .info{
+	background-color: #daeefc;
+	border-radius: 25px 0px 0px 0px;
+}
+
+.header-container .hq{
+	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
+	border-radius: 0px 25px 0px 0px;
+}
+
+
+/*----------Calculation for operation----------*/
+/*---------col-1--------*/
+.calculation-container .ttc{
+	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
+}
+
+.calculation-container .calculation-row{
+	background-color: #daeefc;
+}
+
+.inside-container .kd-left {
+	padding-left: 25px;
+}
+
+.inside-container{
+	margin-top: 20px;
+}
+
+/*---------col-2--------*/
+
+
+.inside-container .row:first-child .kd-left p{
+	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
+	border-radius: 50px;
+	padding: 15px 0px 15px 0px;
+	max-width: 80%;
+}
+
+.inside-container .row:not(:first-child) .kd-left p{
+	padding: 15px 0px 15px 0px;
+	max-width: 80%;
+}
+
+
+.inside-container .row:first-child .gt-right p{
+	background-color: #ffffff;
+	border-radius: 50px;
+	padding: 10px 0px 10px 10px;
+	max-width: 50%;
+}
+
+.inside-container .row:last-child .gt-right p{
+	background-color: #ffffff;
+	border-radius: 50px;
+	padding: 10px 0px 10px 10px;
+	max-width: 50%;
+	text-align: center;
+}
+
+.employeeCount{
+	color: black !important;
+	background-color: #ffffff;
+	border-radius: 50px;
+	padding: 10px 0px -1px 10px;
+	max-width: 50%;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.monthlySalary{
+	color: black !important;
+	background-color: #ffffff;
+	border-radius: 50px;
+	padding: 10px 0px -1px 10px;
+	max-width: 50%;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.ttc{
+	color: #ffffff;
+	padding-top: 30px;
+}
+
+.sum{
+	font-size: 2rem;
+	line-height: 1.4;
+	font-weight: normal;
+}
+
+.ttc .sum-saving{
+	background-color: #ffffff;
+	color: #ee4e34;
+}
+
+.sum-saving{
+	width: 120px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+}
+
+.download{
+	background-color: #ffffff;
+	color: #ee4e34;
+}
+
+
+
+
+
+

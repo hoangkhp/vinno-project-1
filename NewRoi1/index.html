@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vie">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ROI</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  	<link rel="stylesheet" href="./assets/css/reset.css">
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;500;600;700;800&display=swap" rel="stylesheet">
+	<script src="./myscript.js"></script>
+  	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<div class="main">
+
+		<!-- Logo SlimCRM -->
+		<div class="container pt-5">
+		    <div id="logo-container" class="d-flex justify-content-center">
+		        <img id="logo-img" src="./assets/img/logoSlimCRM.jpg" alt="SlimCRM Logo with Text">
+		    </div>
+		</div>
+		<!-- Description -->
+		<div class="container text-center mw desc">
+			<p class="display-6 fw-bold">
+				Bạn Tiết Kiệm Được Bao Nhiêu Thời Gian Và Chi Phí Khi Sử Dụng SlimCRM?
+			</p>
+		</div>
+
+	    <!-- 2 Đầu mục bảng -->
+
+		<div class="container header-container mt-5">
+			<div class="row">
+				<div class="col-md-7 info ">
+					<p class="fs-3 fw-bold py-3 px-4">Nhập thông tin về doanh nghiệp</p>
+				</div>
+				<div class="col-md-5 hq d-flex justify-content-center">
+					<p class="fs-3 fw-bold text-white py-3">ROI - Hiệu quả đầu tư</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Tính toán thời gian cho doanh nghiệp -->
+ 		<div class="container calculation-container mt-1">
+			<div class="row">
+				<!-- col-1 -->
+				<div class="col-md-7 calculation-row ps-30">
+					<!-- 1 -->
+					<div class="container inside-container mt-20">
+						<div class="row">
+							<div class="col-md-6 kd-left rounded-pill text-white text-center fs-5">
+								<p class="fs-5">Bộ phận kinh doanh</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<p class="fs-5">Giải thích</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5" >Số lượng nhân viên</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" onchange="calculateTimeSavingNvs()" onchange="calculateTimeSavingNvs()" class="form-control monthlySalary" id="monthlySalaryNvs" placeholder="Nhập số">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5">Lương trung bình tháng</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text"  class="form-control employeeCount" id="employeeCountNvs" placeholder="Nhập số" onchange="calculateMoneySavingNvs()" >
+							</div>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="container inside-container mt-20">
+						<div class="row">
+							<div class="col-md-6 kd-left rounded-pill text-white text-center fs-5">
+								<p class="fs-5">Bộ phận kinh doanh</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<p class="fs-5">Giải thích</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5" >Số lượng nhân viên</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control monthlySalary" id="monthlySalaryNvm" placeholder="Nhập số" onchange="calculateTimeSavingNvm()">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5">Lương trung bình tháng</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control employeeCount" id="employeeCountNvm" placeholder="Nhập số" onchange="calculateMoneySavingNvm()">
+							</div>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="container inside-container mt-20">
+						<div class="row">
+							<div class="col-md-6 kd-left rounded-pill text-white text-center fs-5">
+								<p class="fs-5">Bộ phận kinh doanh</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<p class="fs-5">Giải thích</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5" >Số lượng nhân viên</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control monthlySalary" id="monthlySalaryNvkt" placeholder="Nhập số" onchange="calculateTimeSavingNvkt()">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5">Lương trung bình tháng</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control employeeCount" id="employeeCountNvkt" placeholder="Nhập số" onchange="calculateMoneySavingNvkt()">
+							</div>
+						</div>
+					</div>
+					<!-- 4 -->
+					<div class="container inside-container mt-20">
+						<div class="row">
+							<div class="col-md-6 kd-left rounded-pill text-white text-center fs-5">
+								<p class="fs-5">Bộ phận kinh doanh</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<p class="fs-5">Giải thích</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5" >Số lượng nhân viên</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control monthlySalary" id="monthlySalaryNvtd" placeholder="Nhập số" onchange="calculateTimeSavingNvtd()">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5">Lương trung bình tháng</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control employeeCount" id="employeeCountNvtd" placeholder="Nhập số" onchange="calculateMoneySavingNvtd()">
+							</div>
+						</div>
+					</div>
+					<!-- 5 -->
+					<div class="container inside-container mt-20">
+						<div class="row">
+							<div class="col-md-6 kd-left rounded-pill text-white text-center fs-5">
+								<p class="fs-5">Bộ phận kinh doanh</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<p class="fs-5">Giải thích</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5" >Số lượng nhân viên</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control monthlySalary" id="monthlySalaryQlct" placeholder="Nhập số" onchange="calculateTimeSavingQlct()">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5">Lương trung bình tháng</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control employeeCount" id="employeeCountQlct" placeholder="Nhập số" onchange="calculateMoneySavingQlct()">
+							</div>
+						</div>
+					</div>
+					<!-- 6 -->
+					<div class="container inside-container mt-20">
+						<div class="row">
+							<div class="col-md-6 kd-left rounded-pill text-white text-center fs-5">
+								<p class="fs-5">Bộ phận kinh doanh</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<p class="fs-5">Giải thích</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5" >Số lượng nhân viên</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control monthlySalary" id="monthlySalaryLdC" placeholder="Nhập số" onchange="calculateTimeSavingLdC()">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 kd-left fs-5">
+								<p class="fs-5">Lương trung bình tháng</p>
+							</div>
+							<div class="col-md-6 gt-right mb-3">
+								<input type="text" class="form-control employeeCount" id="employeeCountLdC" placeholder="Nhập số" onchange="calculateMoneySavingLdC()">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- col 2: Tong thoi gian vs chi phi tiet kiem -->
+				<div class="col-md-5 ttc">
+					<div><p class="sum">Tổng thời gian tiết kiệm được với SlimCRM:</p></div>
+					<div class="d-flex justify-content-start align-items-center py-5">
+						<div>
+							<output type="text" class="sum-saving me-4 rounded-pill" id="giaTri" name="giaTri" value="" onchange="result2">
+						</div>
+						<div><p class="sum">(h/năm)</p></div>
+					</div>
+					<p class="sum">Tổng chi phí tiết kiệm được với SlimCRM:</p>
+					<div class="d-flex justify-content-start align-items-center py-5">
+						<div>
+							<output type="text" class="sum-saving me-4 rounded-pill" id="giaTri" value="" onchange="result1">
+						</div>
+						<div><p class="sum">(triệu VNĐ/năm)</p></div>
+					</div>
+					<div class="d-flex justify-content-start align-items-center">
+						<p class="download px-100 py-50">TẢI FILE PDF ↓</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

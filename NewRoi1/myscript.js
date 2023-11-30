@@ -94,7 +94,7 @@ function totalTimeSaving(){
     return totalTimeSaving;
 }
 function totalTimeSaving(){
-    var totalTimeSaving = calculateMoneySavingNvs() + calculateMoneySavingNvm() + calculateMoneySavingNvkt() + calculateMoneySavingNvtd() + calculateMoneySavingQlct() + calculateMoneySavingLdc();
+    var totalMoneySaving = calculateMoneySavingNvs() + calculateMoneySavingNvm() + calculateMoneySavingNvkt() + calculateMoneySavingNvtd() + calculateMoneySavingQlct() + calculateMoneySavingLdc();
     return totalTimeSaving;
 }
 
