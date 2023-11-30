@@ -1,0 +1,27 @@
+/*===========Aquawax Pro Pictograms===========*/
+@font-face {
+    font-family: 'Aquawax Pro Pictograms';
+    src: url('aquawax-pro/AquawaxProPictograms-Regular.woff2') format('woff2'),
+        url('aquawax-pro/AquawaxProPictograms-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aquawax Pro Trial';
+    src: url('aquawax-pro/AquawaxProTrial-DemiBoldItalic.woff2') format('woff2'),
+        url('aquawax-pro/AquawaxProTrial-DemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aquawax Pro Bold';
+    src:  url('aquawax-pro/AquawaxProTrial-DemiBold.woff2') format('woff2'),
+        url('aquawax-pro/AquawaxProTrial-DemiBold.woff') format('woff');
+/*    font-weight: 1000;*/
+    font-style: normal;
+    font-display: swap;
+}
