@@ -39,9 +39,6 @@ body{
 
 /*----------Calculation for operation----------*/
 /*---------col-1--------*/
-.calculation-container .ttc{
-	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
-}
 
 .calculation-container .calculation-row{
 	background-color: #daeefc;
@@ -54,9 +51,6 @@ body{
 .inside-container{
 	margin-top: 20px;
 }
-
-/*---------col-2--------*/
-
 
 .inside-container .row:first-child .kd-left p{
 	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
@@ -74,17 +68,24 @@ body{
 .inside-container .row:first-child .gt-right p{
 	background-color: #ffffff;
 	border-radius: 50px;
-	padding: 10px 0px 10px 10px;
+	padding: 15px 20px;
 	max-width: 50%;
 }
 
-.inside-container .row:last-child .gt-right p{
+.inside-container .row:not(:first-child) .gt-right p{
 	background-color: #ffffff;
 	border-radius: 50px;
-	padding: 10px 0px 10px 10px;
+	padding: 15px 40px;
 	max-width: 50%;
 	text-align: center;
 }
+
+/*---------col-2--------*/
+.calculation-container .ttc{
+	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
+}
+
+
 
 .employeeCount{
 	color: black !important;
