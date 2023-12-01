@@ -6,151 +6,100 @@ body{
 /*body *.no-font{
 	font-family: auto!important;
 }*/
-/*----------Logo----------*/
 
-
-.logo-img{
-	height: 30px;
-    width: 120px;
-    margin-top: 10px;
-}
-
-.trial-button {
-    background-color: #ee4e34;
-    padding: 8px 16px; /* Điều chỉnh kích thước padding tùy theo nhu cầu */
-}
-
-/*----------Discripttion----------*/
+/*----------Descripttion----------*/
 .desc-1 {
 	max-width: 800px; 
-    margin-left: auto; 
-    margin-right: auto;
 	margin-top: 50px;
 }
 
 .desc-1 p {
 	color: #ee4e34;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.02em;
+	font-size: 2.3rem;
+	line-height: 3rem;
 }
 
-.desc-2 {
-	max-width: 900px; 
-    margin-left: auto; 
-    margin-right: auto;
-	margin-top: 20px;
-}
-.desc-2 p {
-	font-size: 1.1rem;
-}
-/*----------Introduction----------*/
-.header-container .info{
-	background-color: #daeefc;
-	border-radius: 25px 0px 0px 0px;
+
+.row-content p{
+	font-size: 1.5rem;
 }
 
-.header-container .hq{
+.tc2{
 	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
-	border-radius: 0px 25px 0px 0px;
-}
-
-
-/*----------Calculation for operation----------*/
-/*---------col-1--------*/
-
-.calculation-container .calculation-row{
-	background-color: #daeefc;
-}
-
-.inside-container .kd-left {
-	padding-left: 25px;
-}
-
-.inside-container{
-	margin-top: 20px;
-}
-
-.inside-container .row:first-child .kd-left p{
-	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
-	border-radius: 50px;
-	padding: 15px 0px 15px 0px;
-	max-width: 80%;
-}
-
-.inside-container .row:not(:first-child) .kd-left p{
-	padding: 15px 0px 15px 0px;
-	max-width: 80%;
-}
-
-
-.inside-container .row:first-child .gt-right p{
-	background-color: #ffffff;
-	border-radius: 50px;
-	padding: 15px 40px;
-	max-width: 50%;
-}
-
-.inside-container .row:not(:first-child) .gt-right p{
-	background-color: #ffffff;
-	border-radius: 50px;
-	padding: 15px 20px;
-	max-width: 50%;
-	text-align: center;
-}
-
-/*---------col-2--------*/
-.calculation-container .ttc{
-	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
-}
-
-.employeeCount{
-	color: black !important;
-	background-color: #ffffff;
-	border-radius: 50px;
-	padding: 10px 0px -1px 10px;
-	max-width: 50%;
-	text-align: center;
-	font-size: 1.8rem;
-}
-
-.monthlySalary{
-	color: black !important;
-	background-color: #ffffff;
-	border-radius: 50px;
-	padding: 10px 0px -1px 10px;
-	max-width: 50%;
-	text-align: center;
-	font-size: 1.8rem;
-}
-
-.ttc{
 	color: #ffffff;
-	padding-top: 30px;
+	font-size: 1.4rem;
+	font-weight: bold;
 }
 
-.sum{
-	font-size: 2rem;
-	line-height: 1.4;
-	font-weight: normal;
+.container .tc2{
+	margin-top: 2rem;
+	border: none;
 }
 
-.ttc .sum-saving{
-	background-color: #ffffff;
+/* Cot khach hang nhan xet */
+.first-row{
+	margin-top: 3rem;
+}
+
+.feedback{
+	margin-top: 3rem;
+	background-color: #daeefc;
+	padding-bottom: 4rem;
+}
+
+img{
+	margin-top: 3rem;
+	border-radius: 100%;
+	max-width: 20%;
+	height: auto;
+}
+
+.name-singer{
+	margin-top: 1.5rem;
+}
+
+.content{
+	max-width: 75%;
+}
+
+/* O kiem tra */
+
+.test{
+	margin-top: 100px;
+	background-color: #fcedda;
 	color: #ee4e34;
+	padding-bottom: 100px;
+	margin-bottom: 500px;
 }
 
-.sum-saving{
-	width: 120px;
-	height: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 3rem;
+.desc-1 {
+	max-width: 800px; 
+	margin-top: 70px;
 }
 
+.desc-1 p {
+	color: #ee4e34;
+	letter-spacing: 0.02em;
+	font-size: 2.3rem;
+	line-height: 3rem;
+}
+
+/* Nut dat demo */
 .download{
-	background-color: #ffffff;
-	color: #ee4e34;
+	background-color: #ee4e34;
+	color: #ffffff;
+	font-size: 2rem;
+	margin-top: 120px;
 }
+
+
+
+
+
+
+
+
 
 
 
