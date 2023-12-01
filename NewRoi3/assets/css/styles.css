@@ -9,21 +9,38 @@ body{
 /*----------Logo----------*/
 
 
-#logo-container img{
-	height: 50px;
-	width: 200px;
+.logo-img{
+	height: 30px;
+    width: 120px;
+    margin-top: 10px;
 }
+
+.trial-button {
+    background-color: #ee4e34;
+    padding: 8px 16px; /* Điều chỉnh kích thước padding tùy theo nhu cầu */
+}
+
 /*----------Discripttion----------*/
-.desc {
-	max-width: 900px; 
+.desc-1 {
+	max-width: 800px; 
     margin-left: auto; 
     margin-right: auto;
 	margin-top: 50px;
 }
 
-.desc p {
+.desc-1 p {
 	color: #ee4e34;
 	letter-spacing: 0.01em;
+}
+
+.desc-2 {
+	max-width: 900px; 
+    margin-left: auto; 
+    margin-right: auto;
+	margin-top: 20px;
+}
+.desc-2 p {
+	font-size: 1.1rem;
 }
 /*----------Introduction----------*/
 .header-container .info{
@@ -42,7 +59,6 @@ body{
 
 .calculation-container .calculation-row{
 	background-color: #daeefc;
-	border-radius: 0px 0px 0px 25px;
 }
 
 .inside-container .kd-left {
@@ -50,11 +66,7 @@ body{
 }
 
 .inside-container{
-	padding-top: 20px;
-}
-
-.calculation-container .inside-container:not(:first-child){
-	border-top: 4px solid white;
+	margin-top: 20px;
 }
 
 .inside-container .row:first-child .kd-left p{
@@ -73,14 +85,14 @@ body{
 .inside-container .row:first-child .gt-right p{
 	background-color: #ffffff;
 	border-radius: 50px;
-	padding: 15px 20px;
+	padding: 15px 40px;
 	max-width: 50%;
 }
 
 .inside-container .row:not(:first-child) .gt-right p{
 	background-color: #ffffff;
 	border-radius: 50px;
-	padding: 15px 40px;
+	padding: 15px 20px;
 	max-width: 50%;
 	text-align: center;
 }
@@ -88,7 +100,6 @@ body{
 /*---------col-2--------*/
 .calculation-container .ttc{
 	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
-	border-radius: 0px 0px 25px 0px;
 }
 
 .employeeCount{
@@ -136,59 +147,12 @@ body{
 	font-size: 3rem;
 }
 
-/* Nut pdf */
-
 .download{
 	background-color: #ffffff;
 	color: #ee4e34;
-	font-size: 2.5rem;
 }
 
-/* Nut luu y */
-.ly{
-	color: #ffffff;
-	background-color: #ee4e34;
-	font-size: 1.4rem;
-}
 
-.container .ly{
-	margin-top: 10rem;
-}
-
-.row-content{
-	margin-left: 2.3rem;
-}
-
-.content{
-	border-left: 4px solid white;
-	padding-left: 5px;
-}
-/* Các nút cuối cùng */
-.tc,.tc2{
-	background-color: #fcedda;
-	color: #ee4e34;
-	font-size: 1.4rem;
-	font-weight: bold;
-}
-.container .tc, .container .tc1, .container .tc2{
-	margin-top: 4rem;
-	border: none;
-}
-.container .tc2{
-	margin-left: 15px;
-}
-.tc1{
-	color: #fcedda;
-	background-color: #ee4e34;
-	font-size: 1.4rem;
-	font-weight: bold;
-}
-.container .tc1{
-	margin-right: 15px;
-}
-.final-container{
-	margin-bottom: 150px;
-}
 
 
 

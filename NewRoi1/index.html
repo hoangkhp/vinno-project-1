@@ -15,7 +15,6 @@
 </head>
 <body>
 	<div class="main">
-
 		<!-- Logo SlimCRM -->
 		<div class="container pt-5">
 		    <div id="logo-container" class="d-flex justify-content-center">
@@ -28,9 +27,7 @@
 				Bạn Tiết Kiệm Được Bao Nhiêu Thời Gian Và Chi Phí Khi Sử Dụng SlimCRM?
 			</p>
 		</div>
-
 	    <!-- 2 Đầu mục bảng -->
-
 		<div class="container header-container mt-5">
 			<div class="row">
 				<div class="col-md-7 info ">
@@ -41,8 +38,7 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Tính toán thời gian cho doanh nghiệp -->
+		<!-- Tính toán số liệu tiết kiệm cho doanh nghiệp -->
  		<div class="container calculation-container mt-1">
 			<div class="row">
 				<!-- col-1 -->
@@ -213,24 +209,50 @@
 				<!-- col 2: Tong thoi gian vs chi phi tiet kiem -->
 				<div class="col-md-5 ttc">
 					<div><p class="sum">Tổng thời gian tiết kiệm được với SlimCRM:</p></div>
-					<div class="d-flex justify-content-start align-items-center py-5">
+					<div class="d-flex justify-content-start align-items-center mt-4">
 						<div>
 							<output type="text" class="sum-saving me-4 rounded-pill" id="giaTri" name="giaTri" value="" onchange="result2">
 						</div>
 						<div><p class="sum">(h/năm)</p></div>
 					</div>
-					<p class="sum">Tổng chi phí tiết kiệm được với SlimCRM:</p>
-					<div class="d-flex justify-content-start align-items-center py-5">
+					<div class="mt-3"><p class="sum">Tổng chi phí tiết kiệm được với SlimCRM:</p></div>
+					<div class="d-flex justify-content-start align-items-center mt-4">
 						<div>
 							<output type="text" class="sum-saving me-4 rounded-pill" id="giaTri" value="" onchange="result1">
 						</div>
-						<div><p class="sum">(triệu VNĐ/năm)</p></div>
+					<div><p class="sum">(triệu VNĐ/năm)</p></div>
 					</div>
-					<div class="d-flex justify-content-start align-items-center rounded-pill">
-						<p class="download px-100 py-50">TẢI FILE PDF ↓</p>
+					<div class="container d-flex justify-content-center align-items-center mt-5">
+						<button class="btn download btn-warning trial-button rounded-5 px-5 py-3">
+								<span class="fw-bold">TẢI FILE PDF ↓</span>
+						</button>
+					</div>
+					<div class="container d-flex justify-content-start align-items-center">
+						<div class="ly rounded-5 px-5 py-3 ">
+								<p class="">Lưu ý</p>
+						</div>
+					</div>
+					<div class="row-content mt-5">
+						<p class="content lh-base">
+							Việc tính toán chính xác hiệu quả đầu tư phần mềm CRM phụ thuộc vào nhiều yếu tố (quy mô công ty, quy trình công việc,...). <br><br> 
+							Tuy nhiên, thông qua kinh nghiệm và phản hồi từ người dùng SlimCRM cũng như các nghiên cứu và báo cáo từ các nhà cung cấp CRM hàng đầu như Salesforce, HubSpot, Microsoft Dynamics..., chúng ta có thể đưa ra một ước lượng về thời gian và chi phí tiết kiệm có thể đạt được khi sử dụng phần mềm CRM.</p>
+					</div>
+					<div class="container d-flex justify-content-start align-items-center">
+						<button class="tc rounded-5 px-5 py-3 ">
+								<p class="">Thống kê tham chiếu</p>
+						</button>
 					</div>
 				</div>
 			</div>
+		</div>
+		<!-- Hai nút cuối cùng -->
+		<div class="container final-container d-flex justify-content-center">
+			<button class="tc1 rounded-5 px-5 py-3 fs-3 d-flex  ">
+					<p class="">Đăng Kí Dùng Thử</p>
+			</button>
+			<button class="tc2 rounded-5 px-5 py-3 fs-3 d-flex  ">
+				<p class="">Liên hệ Sales</p>
+			</button>
 		</div>
 	</div>
 </body>
