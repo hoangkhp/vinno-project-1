@@ -76,27 +76,27 @@ body{
 .inside-container .row:first-child .kd-left p{
 	background: linear-gradient(90deg, rgb(38, 156, 223) 0%, rgb(18, 17, 212) 100%);
 	border-radius: 50px;
-	padding: 15px 0px 15px 0px;
-	max-width: 80%;
+	padding: 15px 0px 15px 15px;
+	max-width: 90%;
+	
 }
 
 .inside-container .row:not(:first-child) .kd-left p{
-	padding: 15px 0px 15px 0px;
-	max-width: 80%;
+	padding: 15px 0px 15px 15px;
+	max-width: 90%;
 }
-
 
 .inside-container .row:first-child .gt-right p{
 	background-color: #ffffff;
 	border-radius: 50px;
-	padding: 15px 40px;
+	padding: 15px 25px;
 	max-width: 50%;
 }
 
 .inside-container .row:not(:first-child) .gt-right p{
 	background-color: #ffffff;
 	border-radius: 50px;
-	padding: 15px 20px;
+	padding: 15px 25px;
 	max-width: 50%;
 	text-align: center;
 }
