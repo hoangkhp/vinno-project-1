@@ -14,8 +14,8 @@ function calculateMoneySaving(count_nv, monthlySalary, timesaving) {
 function getData(section) {
     var monthlySalary = document.getElementById("monthlySalary" + section).value;
     var employeeCount = document.getElementById("employeeCount" + section).value;
-    monthlySalary = monthlySalary === null ? 0 : monthlySalary;
-    employeeCount = employeeCount === null ? 0 : employeeCount;
+    monthlySalary = monthlySalary === "" ? 0 : monthlySalary;
+    employeeCount = employeeCount === "" ? 0 : employeeCount;
     return { employeeCount, monthlySalary };
 }
 
@@ -97,6 +97,6 @@ function totalMoneySaving(){
 function updateResult(){
     var timeSavingResult = totalTimeSaving();
     var moneySavingResult = totalMoneySaving();
-    document.getElementById('resultDisplayTime').value = ${timeSavingResult};
-    document.getElementById('resultDisplayMoney').value = ${moneySavingResult}; 
+    document.getElementById('resultDisplayTime').textContent = timeSavingResult;
+    document.getElementById('resultDisplayMoney').textContent = moneySavingResult; 
 }
