@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    $("input[id^='monthlySalary']").on("change", function() {
+    $("input[id^='monthlySalary']").on("input", function() {
         updateResult();
     });
 
-    $("input[id^='employeeCount']").on("change", function() {
+    $("input[id^='employeeCount']").on("input", function() {
         updateResult();
     });
 
@@ -26,9 +26,14 @@ $(document).ready(function() {
         return moneySaving;
     }
 
+    function formatCurrency(number) {
+        // Định dạng số thành chuỗi theo định dạng tiền tệ của Việt Nam
+        return number.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+    }
+
     function calculateTotalTimeSaving() {
         var result = 0;
-        ["Nvs", "Nvm", "Nvkt", "Nvtd", "Qlct", "LdC"].forEach(function(section) {
+        ["Nvs", "Nvtd", "Nvm", "Nvkt", "Qlct", "LdC"].forEach(function(section) {
             result += calculateTimeSaving(getData(section).employeeCount, getTimesaving(section));
         });
         return Math.round(result);
@@ -36,11 +41,13 @@ $(document).ready(function() {
 
     function calculateTotalMoneySaving() {
         var result = 0;
-        ["Nvs", "Nvm", "Nvkt", "Nvtd", "Qlct", "LdC"].forEach(function(section) {
+        ["Nvs", "Nvtd", "Nvm", "Nvkt", "Qlct", "LdC"].forEach(function(section) {
             var data = getData(section);
             result += calculateMoneySaving(data.employeeCount, data.monthlySalary, getTimesaving(section));
         });
-        return Math.round(result);
+        formatNumber = formatCurrency(result);
+        
+        return formatNumber;
     }
 
     function getTimesaving(section) {
