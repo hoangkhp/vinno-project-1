@@ -1,103 +1,64 @@
-function calculateTimeSaving(count_nv, timesaving) {
-    var employeeCount = count_nv;
-    hoursSaving = employeeCount * timesaving * 4 * 12;
-    return hoursSaving;                                                     
-}
+$(document).ready(function() {
+    $("input[id^='monthlySalary']").on("change", function() {
+        updateResult();
+    });
 
-function calculateMoneySaving(count_nv, monthlySalary, timesaving) {
-    var hoursPerWeek = 44; // Số giờ làm việc trên 1 tuần mặc định
-    var hoursSalary =  monthlySalary/(hoursPerWeek * 4);
-    var moneySaving = calculateTimeSaving(count_nv, timesaving) * hoursSalary; 
-    return moneySaving;                                                  
-}
+    $("input[id^='employeeCount']").on("change", function() {
+        updateResult();
+    });
 
-function getData(section) {
-    var monthlySalary = document.getElementById("monthlySalary" + section).value;
-    var employeeCount = document.getElementById("employeeCount" + section).value;
-    monthlySalary = monthlySalary === null ? 0 : monthlySalary;
-    employeeCount = employeeCount === null ? 0 : employeeCount;
-    return { employeeCount, monthlySalary };
-}
+    function getData(section) {
+        var monthlySalary = parseInt($("#monthlySalary" + section).val()) || 0;
+        var employeeCount = parseInt($("#employeeCount" + section).val()) || 0;
+        return { employeeCount, monthlySalary };
+    }
 
-function calculateTimeSavingNvs() {
-    var { employeeCount, monthlySalary } = getData('Nvs');
-    result = calculateTimeSaving(employeeCount, 10);
-    return result;                                                    
-}
-function calculateMoneySavingNvs() {
-    var { employeeCount, monthlySalary } = getData('Nvs');
-    result = calculateMoneySaving(employeeCount,monthlySalary, 10);
-    return result;                                                     
-}
+    function calculateTimeSaving(count_nv, timesaving) {
+        var employeeCount = count_nv;
+        var hoursSaving = employeeCount * timesaving * 4 * 12;
+        return hoursSaving;
+    }
 
-function calculateTimeSavingNvm() {
-    var { employeeCount, monthlySalary } = getData('Nvm');
-    result = calculateTimeSaving(employeeCount, 12.5);
-    return result;                                                    
-}
-function calculateMoneySavingNvm() {
-    var { employeeCount, monthlySalary } = getData('Nvm');
-    result =calculateMoneySaving(employeeCount,monthlySalary, 12.5);
-    return result;                                                     
-}
+    function calculateMoneySaving(count_nv, monthlySalary, timesaving) {
+        var hoursPerWeek = 44;
+        var hoursSalary = monthlySalary / (hoursPerWeek * 4);
+        var moneySaving = calculateTimeSaving(count_nv, timesaving) * hoursSalary;
+        return moneySaving;
+    }
 
-function calculateTimeSavingNvkt() {
-    var { employeeCount, monthlySalary } = getData('Nvkt');
-    result = calculateTimeSaving(employeeCount, 9.5);
-    return result ;                                                    
-}
-function calculateMoneySavingNvkt() {
-    var { employeeCount, monthlySalary } = getData('Nvkt');
-    result =calculateMoneySaving(employeeCount,monthlySalary, 9.5);
-    return result;                                                     
-}
+    function calculateTotalTimeSaving() {
+        var result = 0;
+        ["Nvs", "Nvm", "Nvkt", "Nvtd", "Qlct", "LdC"].forEach(function(section) {
+            result += calculateTimeSaving(getData(section).employeeCount, getTimesaving(section));
+        });
+        return Math.round(result);
+    }
 
-function calculateTimeSavingNvtd() {
-    var { employeeCount, monthlySalary } = getData('Nvtd');
-    result = calculateTimeSavingNvtd(employeeCount, 11);
-    return result;                                                    
-}
-function calculateMoneySavingNvtd() {
-    var { employeeCount, monthlySalary } = getData('Nvtd');
-    result = calculateMoneySavingNvtd(employeeCount,monthlySalary, 11);
-    return calculateMoneySavingNvtd;                                                     
-}
+    function calculateTotalMoneySaving() {
+        var result = 0;
+        ["Nvs", "Nvm", "Nvkt", "Nvtd", "Qlct", "LdC"].forEach(function(section) {
+            var data = getData(section);
+            result += calculateMoneySaving(data.employeeCount, data.monthlySalary, getTimesaving(section));
+        });
+        return Math.round(result);
+    }
 
-function calculateTimeSavingQlct() {
-    var { employeeCount, monthlySalary } = getData('Qlct');
-    result= calculateTimeSaving(employeeCount, 7);
-    return result;                                                    
-}
-function calculateMoneySavingQlct() {
-    var { employeeCount, monthlySalary } = getData('Qlct');
-    result = calculateMoneySaving(employeeCount,monthlySalary, 7);
-    return result;                                                     
-}
+    function getTimesaving(section) {
+        switch(section) {
+            case "Nvs": return 10;
+            case "Nvm": return 12.5;
+            case "Nvkt": return 9.5;
+            case "Nvtd": return 11;
+            case "Qlct": return 7;
+            case "LdC": return 7;
+            default: return 0;
+        }
+    }
 
-function calculateTimeSavingLdC() {
-    var { employeeCount, monthlySalary } = getData('LdC');
-    result = calculateTimeSaving(employeeCount, 7);
-    return result;                                                    
-}
-function calculateMoneySavingLdC() {
-    var { employeeCount, monthlySalary } = getData('Nvs');
-    result = calculateMoneySaving(employeeCount,monthlySalary, 7);
-    return result;                                                     
-}
-
-function totalTimeSaving(){
-    var result = calculateTimeSavingNvs() + calculateTimeSavingNvm() + calculateTimeSavingNvkt() + calculateTimeSavingNvtd() + calculateTimeSavingQlct() + calculateTimeSavingLdc();
-    return result;
-}
-function totalMoneySaving(){
-    var result = calculateMoneySavingNvs() + calculateMoneySavingNvm() + calculateMoneySavingNvkt() + calculateMoneySavingNvtd() + calculateMoneySavingQlct() + calculateMoneySavingLdc();
-    return result;
-}
-
-function result1(){
-    console.log(totalTimeSaving());
-}
-
-function result2(){
-    console.log(totalHoursSaving());
-}
+    function updateResult() {
+        var timeSavingResult = calculateTotalTimeSaving();
+        var moneySavingResult = calculateTotalMoneySaving();
+        $("#resultDisplayTime").text(timeSavingResult);
+        $("#resultDisplayMoney").text(moneySavingResult);
+    }
+});

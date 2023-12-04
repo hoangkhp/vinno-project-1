@@ -10,6 +10,7 @@
   	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;500;600;700;800&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="./myscript.js"></script>
   	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -58,7 +59,7 @@
 								<p class="fs-5" >Số lượng nhân viên</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control monthlySalary fs-5 fw-normal fst-italic" id="monthlySalaryNvs" placeholder="Nhập số" onchange="getData('Nvs')">
+								<input type="text" class="form-control monthlySalary fs-5 fw-normal fst-italic" id="employeeCountNvs" placeholder="Nhập số" >
 							</div>
 						</div>
 						<div class="row">
@@ -66,7 +67,7 @@
 								<p class="fs-5">Lương trung bình tháng</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text"  class="form-control employeeCount fs-5 fw-normal fst-italic" id="employeeCountNvs" placeholder="Nhập số" onchange="getData('Nvs')">
+								<input type="text"  class="form-control employeeCount fs-5 fw-normal fst-italic" id="monthlySalaryNvs" placeholder="Nhập số" >
 							</div>
 						</div>
 					</div>
@@ -85,7 +86,7 @@
 								<p class="fs-5" >Số lượng nhân viên</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="monthlySalaryNvm" placeholder="Nhập số" onchange="getData('Nvtd')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="employeeCountNvtd" placeholder="Nhập số">
 							</div>
 						</div>
 						<div class="row">
@@ -93,7 +94,7 @@
 								<p class="fs-5">Lương trung bình tháng</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="employeeCountNvm" placeholder="Nhập số" onchange="getData('Nvtd')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="monthlySalaryNvtd" placeholder="Nhập số">
 							</div>
 						</div>
 					</div>
@@ -112,7 +113,7 @@
 								<p class="fs-5" >Số lượng nhân viên</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="monthlySalaryNvkt" placeholder="Nhập số" onchange="getData('Nvm')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="employeeCountNvm" placeholder="Nhập số" >
 							</div>
 						</div>
 						<div class="row">
@@ -120,7 +121,7 @@
 								<p class="fs-5">Lương trung bình tháng</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="employeeCountNvkt" placeholder="Nhập số" onchange="getData('Nvm')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="monthlySalaryNvm" placeholder="Nhập số" >
 							</div>
 						</div>
 					</div>
@@ -139,7 +140,7 @@
 								<p class="fs-5" >Số lượng nhân viên</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="monthlySalaryNvtd" placeholder="Nhập số" onchange="getData('Nvkt')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="employeeCountNvkt" placeholder="Nhập số" >
 							</div>
 						</div>
 						<div class="row">
@@ -147,7 +148,7 @@
 								<p class="fs-5">Lương trung bình tháng</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="employeeCountNvtd" placeholder="Nhập số" onchange="getData('Nvkt')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" SalaryonthlyCountNvkt" placeholder="Nhập số" >
 							</div>
 						</div>
 					</div>
@@ -166,7 +167,7 @@
 								<p class="fs-5" >Số lượng nhân viên</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="monthlySalaryQlct" placeholder="Nhập số" onchange="getData('Qlct')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="employeeCountQlct" placeholder="Nhập số" >
 							</div>
 						</div>
 						<div class="row">
@@ -174,7 +175,7 @@
 								<p class="fs-5">Lương trung bình tháng</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="employeeCountQlct" placeholder="Nhập số" onchange="getData('Qlct')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" SalaryonthlyCountQlct" placeholder="Nhập số" >
 							</div>
 						</div>
 					</div>
@@ -193,7 +194,7 @@
 								<p class="fs-5" >Số lượng nhân viên</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="monthlySalaryLdC" placeholder="Nhập số" onchange="getData('LdC')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic monthlySalary" id="employeeCountLdC" placeholder="Nhập số" >
 							</div>
 						</div>
 						<div class="row">
@@ -201,7 +202,7 @@
 								<p class="fs-5">Lương trung bình tháng</p>
 							</div>
 							<div class="col-md-6 gt-right mb-3">
-								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" id="employeeCountLdC" placeholder="Nhập số" onchange="getData('LdC')">
+								<input type="text" class="form-control fs-5 fw-normal fst-italic employeeCount" SalaryonthlyCountLdC" placeholder="Nhập số" >
 							</div>
 						</div>
 					</div>
@@ -211,7 +212,7 @@
 					<div><p class="sum">Tổng thời gian tiết kiệm được với SlimCRM:</p></div>
 					<div class="d-flex justify-content-start align-items-center mt-4">
 						<div>
-							<output class="sum-saving me-4 rounded-pill" id="resultDisplayTime" >
+							<span class="sum-saving me-4 rounded-pill" id="resultDisplayTime"></span>
 						</div>
 						<div>
 							<p class="sum">(h/năm)</p>
@@ -220,7 +221,7 @@
 					<div class="mt-3"><p class="sum">Tổng chi phí tiết kiệm được với SlimCRM:</p></div>
 					<div class="d-flex justify-content-start align-items-center mt-4">
 						<div>
-							<output class="sum-saving me-4 rounded-pill" id="resultDisplayMoney" >
+							<span class="sum-saving me-4 rounded-pill" id="resultDisplayMoney"></span>
 						</div>
 						<div>
 							<p class="sum">(triệu VNĐ/năm)</p>
